@@ -5,7 +5,8 @@ class Model_pelajar extends CI_Model
 {
     public function get_pelajar()
     {
-        $q = $this->db->query(" SELECT * FROM tbl_pelajar ");
+        // $q = $this->db->query(" SELECT * FROM tbl_pelajar ");
+        $q = $this->db->get("tbl_pelajar ");
         return $q;
     }
 }

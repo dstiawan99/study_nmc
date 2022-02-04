@@ -28,9 +28,11 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="example1" class="table table-bordered table-striped">
+
                                 <thead>
                                     <tr>
+                                        <th>NO</th>
                                         <th>NISN</th>
                                         <th>NAMA SISWA</th>
                                         <th>JURUSAN</th>
@@ -39,13 +41,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>234564</td>
-                                        <td>Fugosu Nobima</td>
-                                        <td>TOKR</td>
-                                        <td>XII</td>
-                                        <td>fugo@bima.com</td>
-                                    </tr>
+                                    <?php
+                                    $no = 1;
+                                    foreach ($pelajar->result_array() as $data) :
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $no++ ?></td>
+                                            <td><?php echo $data['nis'] ?></td>
+                                            <td><?php echo $data['nama_siswa'] ?></td>
+                                            <td><?php echo $data['kelas'] ?></td>
+                                            <td><?php echo $data['jurusan'] ?></td>
+                                            <td><?php echo $data['email'] ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
