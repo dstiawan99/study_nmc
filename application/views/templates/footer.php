@@ -34,7 +34,12 @@
 <script src="<?php echo base_url() ?>assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url() ?>assets/dist/js/demo.js"></script>
-<!-- Page specific script -->
+<!-- jquery-validation -->
+<script src="<?php echo base_url() ?>assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/jquery-validation/additional-methods.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="<?php echo base_url() ?>assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- Page specific script Search dataTable-->
 <script>
     $(function() {
         $("#example1").DataTable({
@@ -52,6 +57,59 @@
             "autoWidth": false,
             "responsive": true,
         });
+    });
+</script>
+<!-- Page specific script Validation-->
+<script>
+    $(function() {
+        $.validator.setDefaults({
+            submitHandler: function() {
+                alert("Form successful submitted!");
+            }
+        });
+        $('#quickForm').validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                terms: {
+                    required: true
+                },
+            },
+            messages: {
+                email: {
+                    required: "Please enter a email address",
+                    email: "Please enter a vaild email address"
+                },
+                password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 5 characters long"
+                },
+                terms: "Please accept our terms"
+            },
+            errorElement: 'span',
+            errorPlacement: function(error, element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight: function(element, errorClass, validClass) {
+                $(element).addClass('is-invalid');
+            },
+            unhighlight: function(element, errorClass, validClass) {
+                $(element).removeClass('is-invalid');
+            }
+        });
+    });
+</script>
+<!-- Page specific script General Form-->
+<script>
+    $(function() {
+        bsCustomFileInput.init();
     });
 </script>
 </body>
