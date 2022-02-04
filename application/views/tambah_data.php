@@ -22,7 +22,8 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
-                <div class="col-md-12">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
                     <!-- jquery validation -->
                     <div class="card card-primary">
                         <div class="card-header">
@@ -30,7 +31,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form" action="<?php echo base_url() ?>pelajar/add" method="POST">
+                        <form role="form" action="<?php echo base_url() ?>pelajar/add   " method="POST">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>NIS</label>
@@ -62,12 +63,8 @@
                     </div>
                     <!-- /.card -->
                 </div>
+                <div class="col-md-1"></div>
                 <!--/.col (left) -->
-                <!-- right column -->
-                <div class="col-md-6">
-
-                </div>
-                <!--/.col (right) -->
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->

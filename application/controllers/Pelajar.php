@@ -19,9 +19,6 @@ class Pelajar extends CI_Controller
 	}
 	public function tambah_data()
 	{
-
-
-
 		// $data['pelajar'] = $this->Model_pelajar->get_pelajar();
 		$this->load->view('templates/header');
 		$this->load->view('templates/navbar');
@@ -41,6 +38,10 @@ class Pelajar extends CI_Controller
 		);
 
 		if ($this->db->insert('tbl_pelajar', $data)) {
+			$this->session->set_flashdata("success", "Berhasil Menambahkan Data");
+			echo "<script>window.location.href='" . base_url() . "pelajar" . "';</script>";
+		} else {
+			$this->session->set_flashdata("error", "Gagal Menambahkan Data");
 			echo "<script>window.location.href='" . base_url() . "pelajar" . "';</script>";
 		}
 	}

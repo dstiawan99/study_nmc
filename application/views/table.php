@@ -23,6 +23,22 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card card-primary">
+                        <?php if ($this->session->flashdata("success")) { ?>
+                            <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <span style="text-align: left;"> <?php echo $this->session->flashdata("success"); ?></span>
+                            </div>
+                        <?php  } ?>
+                        <?php if ($this->session->flashdata("error")) { ?>
+                            <div class="alert alert-danger">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <span style="text-align: left;"> <?php echo $this->session->flashdata("error"); ?></span>
+                            </div>
+                        <?php  } ?>
                         <div class="card-header">
                             <h3 class="card-title">Data Pelajar</h3>
                         </div>
