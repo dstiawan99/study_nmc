@@ -7,7 +7,8 @@
     <title>STUDI SIKAT</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"> -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/google-font-family.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/fontawesome-free/css/all.min.css">
     <!-- DataTables -->

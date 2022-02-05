@@ -37,10 +37,9 @@
                     <a class="nav-link" data-toggle="dropdown" href="#">
                         <i class="far fa-user"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-file mr-2"></i> 3 new reports
-                            <span class="float-right text-muted text-sm">2 days</span>
+                    <div class="dropdown-menu dropdown-menu">
+                        <a href="<?php echo base_url() ?>auth/logout" class="dropdown-item"> Sign Out
+                            <i class="fas fa-file ml-2"></i>
                         </a>
                     </div>
                 </li>

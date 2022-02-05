@@ -6,34 +6,46 @@ class Pelajar extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Model_pelajar');
+		$this->load->model('Pelajar_model');
 	}
 	public function index()
 	{
-		$data['pelajar'] = $this->Model_pelajar->get_pelajar();
-		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
-		$this->load->view('templates/sidebar');
-		$this->load->view('table', $data);
-		$this->load->view('templates/footer');
+		if ($this->session->userdata('login') == TRUE) {
+			$data['pelajar'] = $this->Pelajar_model->get_pelajar();
+			$this->load->view('templates/header');
+			$this->load->view('templates/navbar');
+			$this->load->view('templates/sidebar');
+			$this->load->view('table', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->load->view('auth/login');
+		}
 	}
 	public function tambah_data()
 	{
-		// $data['pelajar'] = $this->Model_pelajar->get_pelajar();
-		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
-		$this->load->view('templates/sidebar');
-		$this->load->view('tambah_data');
-		$this->load->view('templates/footer');
+		if ($this->session->userdata('login') == TRUE) {
+			// $data['pelajar'] = $this->Pelajar_model->get_pelajar();
+			$this->load->view('templates/header');
+			$this->load->view('templates/navbar');
+			$this->load->view('templates/sidebar');
+			$this->load->view('tambah_data');
+			$this->load->view('templates/footer');
+		} else {
+			$this->load->view('auth/login');
+		}
 	}
 	public function edit_data($nis = '')
 	{
-		$data['pelajar'] = $this->db->get_where('tbl_pelajar', array('nis' => $nis), 1)->row();
-		$this->load->view('templates/header');
-		$this->load->view('templates/navbar');
-		$this->load->view('templates/sidebar');
-		$this->load->view('edit_data', $data);
-		$this->load->view('templates/footer');
+		if ($this->session->userdata('login') == TRUE) {
+			$data['pelajar'] = $this->db->get_where('tbl_pelajar', array('nis' => $nis), 1)->row();
+			$this->load->view('templates/header');
+			$this->load->view('templates/navbar');
+			$this->load->view('templates/sidebar');
+			$this->load->view('edit_data', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->load->view('auth/login');
+		}
 	}
 
 	public function add()

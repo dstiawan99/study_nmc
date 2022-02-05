@@ -77,10 +77,10 @@
                                             <td><?php echo $data['email'] ?></td>
                                             <td>
                                                 <span data-toggle="tooltip" data-original-tittle="Edit Data" style="font-size: 10;">
-                                                    <a href="<?php echo base_url() ?>pelajar/edit_data/<?php echo $data['nis']; ?>" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                                                    <a href="<?php echo base_url() ?>pelajar/edit_data/<?php echo $data['nis']; ?>" class="btn btn-warning btn-sm mr-1 mb-1"><i class="fa fa-edit"></i></a>
                                                 </span>
                                                 <span data-toggle="tooltip" data-original-tittle="Hapus Data" style="font-size: 10;">
-                                                    <a href="<?php echo base_url() ?>pelajar/delete/<?php echo $data['nis']; ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="<?php echo base_url() ?>pelajar/delete/<?php echo $data['nis']; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                                 </span>
                                             </td>
                                         </tr>

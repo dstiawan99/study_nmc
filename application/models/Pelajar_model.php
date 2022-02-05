@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Model_pelajar extends CI_Model
+class Pelajar_model extends CI_Model
 {
     public function get_pelajar()
     {

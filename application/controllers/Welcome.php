@@ -21,11 +21,15 @@ class Welcome extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->view('templates/header');
-		// $this->load->view('welcome_message');
-		$this->load->view('templates/navbar');
-		$this->load->view('templates/sidebar');
-		$this->load->view('dashboard');
-		$this->load->view('templates/footer');
+		if ($this->session->userdata('login') == TRUE) {
+			$this->load->view('templates/header');
+			// $this->load->view('welcome_message');
+			$this->load->view('templates/navbar');
+			$this->load->view('templates/sidebar');
+			$this->load->view('dashboard');
+			$this->load->view('templates/footer');
+		} else {
+			$this->load->view('auth/login');
+		}
 	}
 }
