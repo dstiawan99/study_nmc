@@ -60,7 +60,7 @@
     });
 </script>
 <!-- Page specific script Validation-->
-<script>
+<!-- <script>
     $(function() {
         $.validator.setDefaults({
             submitHandler: function() {
@@ -105,7 +105,7 @@
             }
         });
     });
-</script>
+</script> -->
 <!-- Page specific script General Form-->
 <script>
     $(function() {
