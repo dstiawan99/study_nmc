@@ -22,9 +22,10 @@ class Welcome extends CI_Controller
 	public function index()
 	{
 		if ($this->session->userdata('login') == TRUE) {
+			$data['user'] = $this->db->get_where('tbl_user', array('id_user' => $this->session->userdata('id_user')), 1)->row()->photo;
 			$this->load->view('templates/header');
 			// $this->load->view('welcome_message');
-			$this->load->view('templates/navbar');
+			$this->load->view('templates/navbar', $data);
 			$this->load->view('templates/sidebar');
 			$this->load->view('dashboard');
 			$this->load->view('templates/footer');

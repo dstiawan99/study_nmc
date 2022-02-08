@@ -13,9 +13,9 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                    <!-- <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                         <i class="fas fa-search"></i>
-                    </a>
+                    </a> -->
                     <div class="navbar-search-block">
                         <form class="form-inline">
                             <div class="input-group input-group-sm">
@@ -35,12 +35,35 @@
                 <!-- Notifications -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
+                        <?php echo $this->session->userdata('username'); ?>
                         <i class="far fa-user"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu">
-                        <a href="<?php echo base_url() ?>auth/logout" class="dropdown-item"> Sign Out
-                            <i class="fas fa-file ml-2"></i>
-                        </a>
+                        <div href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="<?php echo base_url() ?>assets/uploads/<?php echo $user ?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        <?php echo $this->session->userdata('nama_user'); ?>
+                                        <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                                    </h3>
+                                    <a href="<?php echo base_url() ?>pelajar/ubah_foto" class="btn btn-sm">
+                                        <i class="fas fa-upload"></i>Change Photo
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </div>
+                        <div class="dropdown-divider"></div>
+
+                        <div class="row">
+                            <div class="col-sm">
+                                <a href="<?php echo base_url() ?>auth/logout" class="btn btn-sm"> Sign Out
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
                     </div>
                 </li>
                 <!-- End Notifications -->

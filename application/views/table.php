@@ -45,9 +45,13 @@
                         <div class="card-body">
                             <!-- <div class="float-left"> -->
                             <div class="mb-2">
-                                <a href="<?php echo base_url() ?>pelajar/tambah_data" class="btn btn-primary">
-                                    <i class="fa fa-plus mr-2"></i>
+                                <a href="<?php echo base_url() ?>pelajar/tambah_data" class="btn btn-primary mr-2">
+                                    <i class="fa fa-plus"></i>
                                     Tambah Data
+                                </a>
+                                <a href="<?php echo base_url() ?>laporan" class="btn btn-success">
+                                    <i class="fa fa-print"></i>
+                                    Cetak Laporan
                                 </a>
                             </div>
                             <table id="example1" class="table table-bordered table-striped">
