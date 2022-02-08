@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>STUDI SIKAT</title>
-
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6812/6812384.png">
     <!-- Google Font: Source Sans Pro -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"> -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/google-font-family.css">

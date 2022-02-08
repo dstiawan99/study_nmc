@@ -54,10 +54,10 @@
                             </div>
                             <!-- Message End -->
                         </div>
-                        <div class="dropdown-divider"></div>
+                        <!-- <div class="dropdown-divider"></div> -->
 
-                        <div class="row">
-                            <div class="col-sm">
+                        <div class="dropdown-item">
+                            <div class="float-sm-right">
                                 <a href="<?php echo base_url() ?>auth/logout" class="btn btn-sm"> Sign Out
                                     <i class="fas fa-sign-out-alt"></i>
                                 </a>

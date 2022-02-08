@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <!-- <h1>DataTables</h1> -->
+                    <h1>Data Pelajar</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">DataTables</li>
+                        <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">DataTables</li> -->
                     </ol>
                 </div>
             </div>
@@ -53,6 +53,11 @@
                                     <i class="fa fa-print"></i>
                                     Cetak Laporan
                                 </a>
+                                <!-- <a data-toggle="modal" data-target="#modalTambah" class="btn btn-primary ml-2">
+                                    <i class="fa fa-plus"></i>
+                                    Tambah Data -->
+                                <!-- Dengan Modal -->
+                                </a>
                             </div>
                             <table id="example1" class="table table-bordered table-striped">
 
@@ -80,10 +85,14 @@
                                             <td><?php echo $data['jurusan'] ?></td>
                                             <td><?php echo $data['email'] ?></td>
                                             <td>
-                                                <span data-toggle="tooltip" data-original-tittle="Edit Data" style="font-size: 10;">
+                                                <span data-toggle="tooltip" title="Edit Data" style="font-size: 10;">
                                                     <a href="<?php echo base_url() ?>pelajar/edit_data/<?php echo $data['nis']; ?>" class="btn btn-warning btn-sm mr-1 mb-1"><i class="fa fa-edit"></i></a>
                                                 </span>
-                                                <span data-toggle="tooltip" data-original-tittle="Hapus Data" style="font-size: 10;">
+                                                <!-- <span data-toggle="tooltip" title="Edit Data Dengan Modal" style="font-size: 10;">
+                                                    <a data-toggle="modal" data-target="#modalEdit" class="btn btn-info btn-sm mr-1 mb-1 ubah_data" data-nis="<?php echo $data['nis'] ?>" data-nama_siswa="<?php echo $data['nama_siswa'] ?>" data-kelas="<?php echo $data['kelas'] ?>" data-jurusan="<?php echo $data['jurusan'] ?>" data-email="<?php echo $data['email'] ?>">
+                                                        <i class="fa fa-edit"></i></a>
+                                                </span> -->
+                                                <span data-toggle="tooltip" title="Hapus Data" style="font-size: 10;">
                                                     <a href="<?php echo base_url() ?>pelajar/delete/<?php echo $data['nis']; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                                 </span>
                                             </td>

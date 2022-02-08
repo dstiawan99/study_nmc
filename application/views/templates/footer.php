@@ -1,8 +1,8 @@
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.1.0
+        <!-- <b>Version</b> 3.1.0 -->
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <!-- <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved. -->
 </footer>
 
 <!-- Control Sidebar -->
@@ -57,6 +57,14 @@
             "autoWidth": false,
             "responsive": true,
         });
+    });
+
+    $(".ubah_data").click(function() {
+        $(".nis").val($(this).attr('data-nis'));
+        $(".nama_siswa").val($(this).attr('data-nama_siswa'));
+        $(".kelas").val($(this).attr('data-kelas'));
+        $(".jurusan").val($(this).attr('data-jurusan'));
+        $(".email").val($(this).attr('data-email'));
     });
 </script>
 <!-- Page specific script Validation-->

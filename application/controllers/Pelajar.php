@@ -20,6 +20,8 @@ class Pelajar extends CI_Controller
 			$this->load->view('templates/navbar', $data);
 			$this->load->view('templates/sidebar');
 			$this->load->view('table');
+			$this->load->view('modal_add');
+			$this->load->view('modal_addcopy');
 			$this->load->view('templates/footer');
 		} else {
 			$this->load->view('auth/login');

@@ -9,8 +9,8 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Validation</li>
+                        <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Validation</li> -->
                     </ol>
                 </div>
             </div>
@@ -48,6 +48,11 @@
                                 <div class="form-group">
                                     <label>Jurusan</label>
                                     <input type="text" name="jurusan" class="form-control" placeholder="Input Jurusan">
+                                    <!-- <select name="" id="">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select> -->
                                 </div>
                                 <div class="form-group">
                                     <label>Email address</label>
